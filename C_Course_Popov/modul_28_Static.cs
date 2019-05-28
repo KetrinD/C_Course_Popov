@@ -8,6 +8,8 @@ namespace C_Course_Popov
 {
     //Модуль 28. Модификатор static. Статические классы и члены классов
 
+     //якщо весь клас є static - ми не можемо створити обєкт такого класу    
+
     class Account
     {
         // !!!! якщо клас має певні спільні стани у вигляді змінних і властивомтей, які розділяються всіма обєктами даного класу, 
@@ -42,6 +44,31 @@ namespace C_Course_Popov
 
         }
     
+    }
+
+    class UserStatic
+    {
+        private static int counter = 0;
+        public int Id { get; set; }
+
+        //стистичні конструтори - це такі коструктор, який виконуються при самому першому створенні обєкта даного класу
+        //або при першому зверненні до цого статистичних членів
+
+        static UserStatic()
+        {
+            Console.WriteLine("First user is created");
+        }
+
+
+        public UserStatic()
+        {
+            Id = ++counter;
+        }
+
+        public static void Display()  // статистичний метод може звернутися до статистичних перемінних
+        {
+            Console.WriteLine($"{counter}");
+        }  
     }
 }
  

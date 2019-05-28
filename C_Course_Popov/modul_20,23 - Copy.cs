@@ -82,11 +82,32 @@ namespace C_Course_Popov
             //   ***** Модуль 28. Модификатор static. Статические классы и члены классов в языке C#  *****
 
             Account.MinSum = 200;
-            Account.GetSum(1000, 10, 5);
+            decimal d = Account.GetSum(1000, 10, 5);
+            Console.WriteLine(d);
 
-            Console.WriteLine(Account.GetSum);
+            UserStatic userStatic1 = new UserStatic();
+            UserStatic userStatic2 = new UserStatic();
+            UserStatic userStatic3 = new UserStatic();
+            UserStatic userStatic4 = new UserStatic();
+            UserStatic userStatic5 = new UserStatic();
+
+            Console.WriteLine(userStatic1.Id);
+            Console.WriteLine(userStatic3.Id);
+            Console.WriteLine(userStatic4.Id);
+             
+            UserStatic.Display();  // виведе число 5 - створено 5 обєктів
 
 
+            // Модуль 29. Перегрузка операторов в языке программирования C#
+
+            Counter c1 = new Counter { Value = 23 };
+            Counter c2 = new Counter { Value = 45 };
+
+            bool result = c1 > c2;
+            Console.WriteLine(result);
+
+            Counter c3 = c2 + c1;
+            Console.WriteLine(c3.Value);
 
             Console.ReadKey();
         }

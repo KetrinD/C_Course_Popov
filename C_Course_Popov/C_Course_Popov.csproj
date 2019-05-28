@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="modul_20,23 - Copy.cs" />
+    <Compile Include="modul_29_Peregruzka_Operatoriv.cs" />
     <Compile Include="modul_28_Static.cs" />
     <Compile Include="modul_26_Properties.cs" />
     <Compile Include="modul_25_Constans.cs" />
