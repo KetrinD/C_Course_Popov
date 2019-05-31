@@ -102,12 +102,32 @@ namespace C_Course_Popov
 
             Counter c1 = new Counter { Value = 23 };
             Counter c2 = new Counter { Value = 45 };
+            Counter c4 = new Counter { Value = 36 };
 
             bool result = c1 > c2;
             Console.WriteLine(result);
 
             Counter c3 = c2 + c1;
             Console.WriteLine(c3.Value);
+
+            Counter c5 = c2 + c4;
+            Console.WriteLine(c5.Value);
+
+            int c6 = c2 + 23;
+            Console.WriteLine(c6);
+
+
+            // Модуль 30. Перегрузка операций преобразования типов в языке C#
+
+            Counter_Modul_30 counter1 = new Counter_Modul_30 { Seconds = 115 };
+            int x = (int)counter1;
+            Counter_Modul_30 counter2 = x;
+
+            Timer timer1 = (Timer)counter1;                //1:55
+            Console.WriteLine($"{timer1.Hours}:{timer1.Minutes}:{timer1.Seconds}");
+
+            Counter_Modul_30 counter3 = (Counter_Modul_30)timer1;     //115 
+            Console.WriteLine($"{counter3.Seconds}");
 
             Console.ReadKey();
         }

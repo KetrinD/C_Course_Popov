@@ -12,9 +12,6 @@ namespace C_Course_Popov
 
     class Person_Properties
     {
-        
-
-
         private string firstName;
         public string FirstName          // властивість - property. Кожна властивість може оприділяти два блоки - блок get і  блок set / управляє доступом до змінної firstName
         {
