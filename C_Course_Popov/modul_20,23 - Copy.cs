@@ -129,6 +129,66 @@ namespace C_Course_Popov
             Counter_Modul_30 counter3 = (Counter_Modul_30)timer1;     //115 
             Console.WriteLine($"{counter3.Seconds}");
 
+
+
+            //Модуль 31.Наследование в языке программирования C#
+
+            Person_Nasliduvannja person_1 = new Person_Nasliduvannja("Bill", "Gates");
+            Employee employee_1 = new Employee("Ilon", "Mask", "SpaceX");
+
+            person_1.Display();
+            employee_1.Display();
+
+
+
+            //Модуль 32.Полиморфизм и переопределение методов.
+
+            Person_Polimorfizm per_1 = new Person_Polimorfizm("Bill", "Gates");
+            per_1.Display();
+
+            Person_Polimorfizm empl_1 = new Employee_Polimorfizm("Ilon", "Mask", "SpaceX");     // обєкт класу Person_Polimorfizm, для створення якого використовується конструктор класу Employee_Polimorfizm 
+            empl_1.Display();
+            
+            Employee_Polimorfizm empl_2 = new Employee_Polimorfizm("Steve", "Jobs", "Apple");
+            empl_2.Display();
+
+
+
+            //Модуль 33. Абстрактные классы и методы в языке программирования C#
+
+            Person_Abstract_Modul client = new Client("Tom", "Smith", 500);                                  // для створення обекту Employee_Abstract_Modul використовується конструктор класу Client
+            Person_Abstract_Modul employee_abs = new Employee_Abstract_Modul("Jerry", "Alba", "Manager");    // для створення обекту Employee_Abstract_Modul використовується конструктор класу Employee_Abstract_Modul
+
+            client.Display();
+            employee_abs.Display();
+
+
+            //Модуль 34.Класс Object и его методы в языке программирования C#
+
+            Person_Object_modul person_obj = new Person_Object_modul();
+            Console.WriteLine(person_obj);   // ToString вертає рядяк (строку)
+
+            Person_Object_modul person_obj_1 = new Person_Object_modul {Name = "SARAH"};
+            Console.WriteLine(person_obj_1);   // ToString вертає рядяк (строку)
+
+            Clock clock = new Clock { Hours = 1, Minutes = 34, Seconds = 23};
+            Console.WriteLine(clock);
+
+
+            Person_Object_modul person_obj_2 = new Person_Object_modul { Name = "Ketrin" };
+            Console.WriteLine(person_obj_2.GetHashCode());
+            Console.WriteLine(person_obj_2.GetType());                                         // GetType - метод дозволяє отримати тип обєкту 
+
+            Person_Object_modul person_obj_3 = new Person_Object_modul { Name = "Ketrin" };   // для обєкту person_obj_2 та обєкту person_obj_3  GetHashCode співпадає, так як імена також співпадали
+            Console.WriteLine(person_obj_3.GetHashCode());
+
+            Person_Object_modul person_obj_4 = new Person_Object_modul { Name = "Julja" };
+            Console.WriteLine(person_obj_4.GetHashCode());
+
+
+            Console.WriteLine(person_obj_1.Equals(person_obj_2));   // поточний обєкт person_obj_1, для якого викликається метод Equals. Тобто це обєкт this в методі Equals. Обєкт person_obj_2 передається в якості параметру
+            Console.WriteLine(person_obj_2.Equals(person_obj_3));
+
             Console.ReadKey();
         }
 
