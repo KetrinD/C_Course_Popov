@@ -34,7 +34,7 @@ namespace C_Course_Popov
 
         public abstract void Display();    // абстрактний метод Display. Абстрактний метод не повинен мати нічкого тіла, тобто не повинен визначати ніяких дій. Післ списку параметрів ставиться ;  і все
         // абстрактний метод або властивості не можуть бути приватними (private)
-        // ми не можемо визначити в звичайному класі абстрактні методи або абстрактні властивості
+        // ми не можемо визначити в звичайному класі (не абстрактному) абстрактні методи або абстрактні властивості
     }
 
     // якщо в базовому класі визначений абстрактниц метод чи абстрактні властивості, то класи-наслідники обовязвоко мають реалізувати такі методи чи властивлості
@@ -43,7 +43,7 @@ namespace C_Course_Popov
 
     class Client : Person_Abstract_Modul
     {
-        //public string FirstName { get; set; } -  спільні властивості для двох класів - тому виносимо в базовий клас
+        //public string FirstName { get; set; } -  спільні властивості для двох класів - тому виносимо в базовий клас Person_Abstract_Modul
         //public string LastName { get; set; }
         public int Sum { get; set; }
 
@@ -65,7 +65,7 @@ namespace C_Course_Popov
 
     class Employee_Abstract_Modul : Person_Abstract_Modul
     {
-        //public string FirstName { get; set; }   - спільні властивості для двох класів - тому виносимо в базовий клас
+        //public string FirstName { get; set; }   - спільні властивості для двох класів - тому виносимо в базовий клас Person_Abstract_Modul
         //public string LastName { get; set; }
         public string Position { get; set; }
 

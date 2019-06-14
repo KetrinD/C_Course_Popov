@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="modul_20,23 - Copy.cs" />
+    <Compile Include="modul_20,23 .cs" />
+    <Compile Include="modul_40_Delegates.cs" />
+    <Compile Include="modul_39_Interfaces.cs" />
+    <Compile Include="modul_38_Null_And_Nullable .cs" />
+    <Compile Include="modul_37_Generics_Limits.cs" />
+    <Compile Include="modul_36_Generics.cs" />
+    <Compile Include="modul_35_Peretvorennja_Typiv.cs" />
     <Compile Include="modul_34_Class_Object.cs" />
     <Compile Include="modul_33_Abstract_Classes.cs" />
     <Compile Include="modul_32_Polimorfizm.cs" />
